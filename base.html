@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+		.dibujo{
+			cursor: pointer;
+			margin-top: 40px;
+		}
+
+		.canvas{
+			width: 65%;
+			float: left;
+			padding: 10px;
+			border: 1px solid #cccccc;
+		}
+
+		.paleta{
+			width: 10%;
+			display: inline-block;
+			float: left;
+			/*border: 1px solid #cccccc;*/
+			margin-top: 50px;
+		}
+		.color{
+			cursor: cross;
+			width: 50px;
+			height: 50px;
+			border: 3px solid #dddddd;
+			border-radius: 5px;
+			margin: 5px;
+			box-shadow:8px  5px gray;
+		}
+		.color:hover{
+			box-shadow:4px  2px gray;
+			margin-left: 8px;
+		}
+		.tabla{
+			list-style: none;
+		}
+	</style>
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+	<div class="container">
+		<div class="canvas">
+
+			<!-- ******************ACA VA EL SVG************************ -->
+
+
+</div>
+<div class="paleta">
+	<table class="tabla">
+		<ul>
+			<tr>
+				<td>
+					<li><div  class="color"  style="background-color: #ffffff;"></div></li>
+					<li><div   class="color" style="background-color: #000000;"></div></li>
+					<li><div   class="color" style="background-color: #fbf2cd;"></div></li>
+					<li><div  class="color"  style="background-color: #f1d3bc;"></div></li>
+					
+					
+				</td>
+				<td>
+					<li><div   class="color" style="background-color: #ffcccc;"></div></li>
+					<li><div   class="color" style="background-color: #ff9999;"></div></li>
+					<li><div   class="color" style="background-color: #cc3300;"></div></li>
+					<li><div   class="color" style="background-color: #cc0000;"></div></li>
+
+				</td>
+				<td>
+				
+					<li><div   class="color" style="background-color: #99ffff;"></div></li>
+					<li><div  class="color"  style="background-color: #00cccc;"></div></li>
+					<li><div   class="color" style="background-color: #3399ff;"></div></li>
+					<li><div  class="color"  style="background-color: #003399;"></div></li>
+				</td>
+				<td>
+				
+					<li><div   class="color" style="background-color: #ccffcc;"></div></li>
+					<li><div  class="color"  style="background-color: #66ff66;"></div></li>
+					<li><div   class="color" style="background-color: #00cc00;"></div></li>
+					<li><div  class="color"  style="background-color: #009900;"></div></li>
+				</td>
+			</tr>
+				<tr>
+				<td>
+					<li><div   class="color" style="background-color: #dfba9d;"></div></li>
+					<li><div  class="color"  style="background-color: #d3996b;"></div></li>
+					<li><div   class="color" style="background-color: #9a5e2f;"></div></li>
+					<li><div  class="color"  style="background-color: #50290a;"></div></li>
+					
+					
+				</td>
+				<td>
+					<li><div   class="color" style="background-color: #ffff99;"></div></li>
+					<li><div   class="color" style="background-color: #ffff33;"></div></li>
+					<li><div   class="color" style="background-color: #ffcc00;"></div></li>
+					<li><div   class="color" style="background-color: #ff9900;"></div></li>
+
+				</td>
+				<td>
+				
+					<li><div   class="color" style="background-color: #ff99cc;"></div></li>
+					<li><div  class="color"  style="background-color: #ff0066;"></div></li>
+					<li><div   class="color" style="background-color: #cc0066;"></div></li>
+					<li><div  class="color"  style="background-color: #990033;"></div></li>
+				</td>
+				<td>
+				
+					<li><div   class="color" style="background-color: #ffccff;"></div></li>
+					<li><div  class="color"  style="background-color: #ff66ff;"></div></li>
+					<li><div   class="color" style="background-color: #cc00cc;"></div></li>
+					<li><div  class="color"  style="background-color: #990099;"></div></li>
+				</td>
+			</tr>
+		
+		</ul>
+	</table>
+</div>
+
+</div>
+
+
+	<script>
+		var selectedColor= "red";
+
+		var vestido = document.getElementsByClassName("parte");
+
+		var colores = document.getElementsByClassName("color");
+
+		for (var i = colores.length - 1; i >= 0; i--) {
+			colores[i].addEventListener("click", function(){
+				selectedColor = this.style.backgroundColor
+			})
+		}
+
+		for (var i = vestido.length - 1; i >= 0; i--) {
+			vestido[i].style.fill = "FFFFFF";
+		}
+
+		for (var i = vestido.length - 1; i >= 0; i--) {
+			vestido[i].addEventListener("click", function(){
+				this.style.fill = selectedColor;
+			})
+		}
+		
+
+		
+
+		
+	</script>
+
+</body>
+</html>

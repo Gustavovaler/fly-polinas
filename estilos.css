@@ -1,0 +1,85 @@
+body{
+	background-color: #f5e3f1;
+	background-repeat: no-repeat;
+}
+
+.nav{
+	padding: 5px;
+}
+.dibujo{
+	cursor: crosshair;
+	
+	width: 400px;
+}
+
+.canvas{
+	width: 65%;
+	float: left;
+	padding: 10px;
+	margin-top: 140px;
+}
+
+.paleta{
+	width: 10%;
+	display: inline-block;
+	margin-top: 270px;
+	float: right;
+	margin-right: 110px;
+	
+	/*border: 1px solid #cccccc;*/
+	
+}
+.color{
+	cursor: cross;
+	width: 34px;
+	height: 35px;
+	border: 3px solid #dddddd;
+	border-radius: 5px;
+	margin: 5px;
+	box-shadow:8px  5px gray;
+}
+.color:hover{
+	box-shadow:4px  2px gray;
+	margin-left: 8px;
+}
+.tabla{
+	list-style: none;
+	cursor: pointer;
+}
+
+@media (max-width: 1360px) {
+	.container{
+		width: 100% ;
+	}
+	.dibujo{
+	cursor: crosshair;
+	margin-top: 40px;
+	}
+
+	.canvas{
+		width: 100%;
+		
+		padding: 10px;
+		
+	}
+
+	.paleta{
+		width: 10%		
+		margin-top: 50px;
+	}
+	.color{
+		cursor: cross;
+		width: 50px;
+		height: 50px;
+		border: 3px solid #dddddd;
+		border-radius: 5px;
+		margin: 5px;
+		box-shadow:8px  5px gray;
+	}
+	.color:hover{
+		box-shadow:4px  2px gray;
+		margin-left: 8px;
+	}
+
+	
+}
