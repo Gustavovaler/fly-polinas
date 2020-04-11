@@ -1,18 +1,8 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title></title>
-	
-	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-	<link rel="stylesheet" href="estilos.css">
-</head>
-<body background="img/fondoPNG.png">
-	<div class="nav">
-	<a href="index.html">Volver --></a>
-</div>
-	<div class="container">
 
-	<div class="canvas">
+<?php
+include("templates/base_top.php");
+
+?>
 	<svg version="1.1" id="Capa_1" x="0px" y="0px"
 	  viewBox="0 0 1268.7 1786.414" enable-background="new 0 0 1268.7 1786.414" class="dibujo">
 
@@ -1456,38 +1446,7 @@
 	</table>
 </div>
 
-</div>
+<?php
+include("templates/base_bottom.php");
 
-
-
-	<script>
-		var selectedColor= "red";
-
-		var vestido = document.getElementsByClassName("parte");
-
-		var colores = document.getElementsByClassName("color");
-
-		for (var i = colores.length - 1; i >= 0; i--) {
-			colores[i].addEventListener("click", function(){
-				selectedColor = this.style.backgroundColor
-			})
-		}
-
-		for (var i = vestido.length - 1; i >= 0; i--) {
-			vestido[i].style.fill = "FFFFFF";
-		}
-
-		for (var i = vestido.length - 1; i >= 0; i--) {
-			vestido[i].addEventListener("click", function(){
-				this.style.fill = selectedColor;
-			})
-		}
-		
-
-		
-
-		
-	</script>
-
-</body>
-</html>
+?>

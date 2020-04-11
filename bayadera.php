@@ -1,50 +1,6 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title></title>
-	<style>
-		.dibujo{
-			cursor: crosshair;
-			margin-top: 40px;
-		}
-
-		.canvas{
-			width: 65%;
-			float: left;
-			padding: 10px;
-			border: 1px solid #cccccc;
-		}
-
-		.paleta{
-			width: 10%;
-			display: inline-block;
-			float: left;
-			/*border: 1px solid #cccccc;*/
-			margin-top: 50px;
-		}
-		.color{
-			cursor: cross;
-			width: 50px;
-			height: 50px;
-			border: 3px solid #dddddd;
-			border-radius: 5px;
-			margin: 5px;
-			box-shadow:8px  5px gray;
-		}
-		.color:hover{
-			box-shadow:4px  2px gray;
-			margin-left: 8px;
-		}
-		.tabla{
-			list-style: none;
-			cursor: pointer;
-		}
-	</style>
-	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-</head>
-<body>
-	<div class="container">
-		<div class="canvas">
+<?php
+include("templates/base_top.php");
+?>
 
 			<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="500" class="dibujo" viewBox="0 0 1010.932 1283.638" enable-background="new 0 0 1010.932 1283.638"
@@ -1482,38 +1438,6 @@
 		</ul>
 	</table>
 </div>
-
-</div>
-
-
-	<script>
-		var selectedColor= "red";
-
-		var vestido = document.getElementsByClassName("parte");
-
-		var colores = document.getElementsByClassName("color");
-
-		for (var i = colores.length - 1; i >= 0; i--) {
-			colores[i].addEventListener("click", function(){
-				selectedColor = this.style.backgroundColor
-			})
-		}
-
-		for (var i = vestido.length - 1; i >= 0; i--) {
-			vestido[i].style.fill = "FFFFFF";
-		}
-
-		for (var i = vestido.length - 1; i >= 0; i--) {
-			vestido[i].addEventListener("click", function(){
-				this.style.fill = selectedColor;
-			})
-		}
-		
-
-		
-
-		
-	</script>
-
-</body>
-</html>
+<?php
+include("templates/base_bottom.php");
+?>
